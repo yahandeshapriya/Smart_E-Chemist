@@ -1,0 +1,61 @@
+<p-toast></p-toast>
+<div class="admin-page">
+    <p-card [header]="editMode ? 'Update Drug Details' : 'Add a New Drug'"
+            [subheader]="editMode ? 'You can update drugs below' : 'You can add new drugs below'">
+
+        <div class="grid mb-4">
+            <div class="col">
+                <p-toolbar>
+                    <div class="p-toolbar-group-right"></div>
+                    <div class="p-toolbar-group-right">
+                        <p-button [label]="editMode ? 'Update' : 'Create'" [icon]="editMode ? 'pi pi-send' : 'pi pi-plus'" styleClass="p-button-success p-button-raised mr-2" (onClick)="onSubmit()"></p-button>
+                        <p-button label="Clear" icon="pi pi-refresh" styleClass="p-button-secondary p-button-raised mr-2" (onClick)="clear()"></p-button>
+                        <p-button label="Cancel" icon="pi pi-times-circle" styleClass="p-button-danger p-button-raised" (onClick)="goBack()"></p-button>
+                    </div>
+                </p-toolbar>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="col-12">
+
+                <form [formGroup]="form">
+
+                    <div class="p-fluid p-formgrid grid">
+
+                        <div class="field col mr-6">
+                            <label for="generic_name">Generic Name</label>
+                            <input formControlName="generic_name" id="generic_name" type="text"  pInputText> 
+                            <small *ngIf="form.controls.generic_name.invalid && isSubmitted" class="p-error">Generic Name Required</small>
+                        </div>
+            
+                        <div class="field col">
+                            <label for="brand_name">Brand Name</label>
+                            <input formControlName="brand_name" id="brand_name" type="text" pInputText> 
+                            <small *ngIf="form.controls.brand_name.invalid && isSubmitted" class="p-error">Brand Name Required</small>
+                        </div>
+
+                    </div>
+
+                    <div class="p-fluid p-formgrid grid">
+
+                        <div class="field col mr-6">
+                            <label for="dosage_form">Dosage Form</label>
+                            <p-dropdown [options]="dosageForms" formControlName="dosage_form" optionLabel="form" optionValue="form" placeholder="Select dosage form" ></p-dropdown> 
+                            <small *ngIf="form.controls.dosage_form.invalid && isSubmitted" class="p-error">Dosage Form Required</small>
+                        </div>
+            
+                        <div class="field col">
+                            <label for="manufacturer">Manufacturer</label>
+                            <input formControlName="manufacturer" id="manufacturer" type="text" pInputText> 
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+          </div>
+
+    </p-card>
+</div>

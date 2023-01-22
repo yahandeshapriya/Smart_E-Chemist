@@ -1,0 +1,76 @@
+<p-toast></p-toast>
+<div class="admin-page">
+    <p-card header="Dr {{doctor.firstName}}" subheader="{{doctor.speciality}}">
+
+        <div class="grid mb-4">
+            <div class="col">
+                <p-toolbar>
+                    <div class="p-toolbar-group-right"></div>
+                    <div class="p-toolbar-group-right">
+                        <p-button *ngIf="!doctor.isProfileVerified" label="Verify" icon="pi pi-check-square" styleClass="p-button-success p-button-raised mr-2" (onClick)="onVerify()"></p-button>
+
+                        <p-button label="Delete" icon="pi pi-trash" styleClass="p-button-danger p-button-raised mr-2" (onClick)="onDelete()"></p-button>
+
+                        <p-button label="Back" icon="pi pi-chevron-left" styleClass="p-button-secondary p-button-raised" (onClick)="goBack()"></p-button>
+                    </div>
+                </p-toolbar>
+            </div>
+        </div>
+        
+        <p-fieldset legend="Contact Information" styleClass="mb-2">
+            <div class="text-field">
+                <h4 class="header">Full name</h4>
+                <h4>{{doctor.firstName}} {{doctor.lastName}}</h4>
+            </div>
+
+            <div class="text-field">
+                <h4 class="header">Email</h4>
+                <h4>{{doctor.email}}</h4>
+            </div>
+
+            <div class="text-field">
+                <h4 class="header">Phone Number</h4>
+                <h4>{{doctor.mobile}}</h4>
+            </div>
+
+            <div class="text-field">
+                <h4 class="header">NIC</h4>
+                <h4>{{doctor.nic}}</h4>
+            </div>
+
+            <div class="text-field">
+                <h4 class="header">Address</h4>
+                <h4>{{doctor.address}}</h4>
+            </div>
+
+        </p-fieldset>
+
+        <p-fieldset legend="Occupation Information" styleClass="mb-2">
+            <div class="text-field">
+                <h4 class="header">SLMC</h4>
+                <h4>{{doctor.slmcRegNo}}</h4>
+            </div>
+
+            <div class="text-field">
+                <h4 class="header">Speciality</h4>
+                <h4>{{doctor.speciality}}</h4>
+            </div>
+
+            <div class="text-field">
+                <h4 class="header">Hospital</h4>
+                <h4>{{doctor.hospital}}</h4>
+            </div>
+
+        </p-fieldset>
+
+        <p-fieldset legend="SLMC Registration Document" styleClass="mb-2">
+            
+            <div class="img-container">
+                <p-image src="{{doctor.slmcDocument}}" alt="slmcDocument" [preview]="true"></p-image>
+            </div>
+        </p-fieldset>
+        
+    </p-card>
+</div>
+
+<p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-text"></p-confirmDialog>

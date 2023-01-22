@@ -1,0 +1,47 @@
+.login-page {
+    width: 100%;
+    height: 80vh;
+    background: url('../../../apps/rx-home/src/assets/showcase_login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    position: relative;
+
+    .section-center {
+        width: 100%;
+        height: 100%;
+        background-color: hsla(233, 12%, 13%, 0.5);
+        color: $clr-white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .p-card {
+            width: 24em;
+            height: 24em;
+        }
+
+       .p-inputtext-lg {
+        font-size: .9rem;
+       }
+
+       .login-btn {
+        width: 100%;
+        background-color: $clr-green;
+        padding-block: .75rem;
+
+        &:hover {
+            background-color: $clr-accent-400;
+         }
+       }
+
+       .field {
+        margin-bottom: 1.5rem;
+       }
+
+    }
+
+    
+
+}
