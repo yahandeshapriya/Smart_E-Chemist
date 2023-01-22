@@ -1,2 +1,8 @@
-# Smart_E-Chemist
-This is an Online Pharmacy Management System which was designed for Smart E-Chemist business organization. 
+# Smart E-Chemist 
+Smart E-Chemist (Online Pharmacy Management System)
+
+Smart E-Chemist is the name of a business organization, that provides service for consumers in Sri Lanka to fulfil their essential medicines & other health-related products. This business organization carried out their business activities through the online platform by using a web application. Hence this is basically an Online Pharmacy Management System.
+
+This web application mainly interacts with four users, there are, Administrative Users (Admin), Consumers, Suppliers & Product Delivery Users. These four users can perform some specified tasks in their user interfaces to accomplish their requirements. Consumers can order any medical products that were available in the web application or they can upload prescriptions to the system by using the given facilities in the web application. In addition, consumers can settle their payments for the selected medical products by using debit or credit card facilities (Payment Gateway). Furthermore, if consumers cannot settle their payments by using debit or credit card facilities, they can simply switch to the cash on delivery methodology (COD) to fulfil their requirements. 
+
+This web application mainly consists of CRUD (Create, Read, Update & Delete) operations. hence, these CRUD operations, help to give a better user experience for the system users. In addition. FAQs (frequently asked questions) facility was available on this web platform as well and many more facilities were available for the system users to give a better experience while utilizing this web application. Furthermore, this platform was hosted on the internet.
