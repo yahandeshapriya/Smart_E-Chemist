@@ -1,0 +1,12 @@
+<div *ngIf="!verifySuccess" class="verify-text">
+    <h1>Registration Successful!</h1>
+    <p>We have sent you a verification Email.</p>
+    <p>Please follow the verification link to verify your email.</p>
+</div>
+
+<div *ngIf="verifySuccess" class="verify-success">
+    <h1>Email Verification Successful!</h1>
+    <p>Please click the sing in button below</p>
+    <button (click)="navigateToLogin()"class="btn sign-in">Sign In</button>
+</div>
+

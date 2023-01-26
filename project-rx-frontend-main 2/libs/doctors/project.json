@@ -1,0 +1,22 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/doctors/src",
+  "prefix": "frontend",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/doctors"],
+      "options": {
+        "jestConfig": "libs/doctors/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/doctors/**/*.ts", "libs/doctors/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

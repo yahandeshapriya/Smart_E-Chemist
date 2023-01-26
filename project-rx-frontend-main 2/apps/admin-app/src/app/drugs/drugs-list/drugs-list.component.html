@@ -1,0 +1,52 @@
+<p-toast></p-toast>
+<div class="admin-page">
+    <p-card header="Drugs" subheader="List of All Drugs">
+
+        <div class="grid">
+            <div class="col">
+               <p-toolbar>
+                  <div class="p-toolbar-group-left">
+                    <p-button label="New" icon="pi pi-plus" styleClass="p-button-success p-button-raised" routerLink="form"></p-button>
+
+                    <div class="ml-6">
+                        <input (input)="onInputChange($event)" id="generic_name" type="text" placeholder="Search" pInputText> 
+                    </div>
+                  </div>
+               </p-toolbar>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="col-12">
+                <p-table [value]="drugList" styleClass="p-datatable-gridlines"  responsiveLayout="scroll">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Generic Name</th>
+                            <th>Brand Name</th>
+                            <th>Dosage Form</th>
+                            <th>Manufacturer</th>
+                            <th>Update/Delete</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-drug>
+                        <tr>
+                            <td>{{drug.generic_name}}</td>
+                            <td>{{drug.brand_name}}</td>
+                            <td>{{drug.dosage_form}}</td>
+                            <td>{{drug.manufacturer}}</td>
+                            <td class="flex align-items-center justify-content-center">
+
+                                <button pButton pRipple type="button" icon="pi pi-pencil" class="p-button-rounded p-button-secondary p-button-outlined p-button-sm mr-2" (click)="updateDrug(drug._id)"></button>
+
+                                <button pButton pRipple type="button" icon="pi pi-trash" class="p-button-rounded p-button-danger p-button-outlined p-button-sm" (click)="deleteDrug(drug._id)"></button>
+
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </p-card>
+</div>
+
+<p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-text"></p-confirmDialog>

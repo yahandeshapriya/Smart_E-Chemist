@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "admin-app": "apps/admin-app",
+    "admin-app-e2e": "apps/admin-app-e2e",
+    "doctor-app": "apps/doctor-app",
+    "doctor-app-e2e": "apps/doctor-app-e2e",
+    "doctors": "libs/doctors",
+    "drugs": "libs/drugs",
+    "prescription": "libs/prescription",
+    "rx-home": "apps/rx-home",
+    "rx-home-e2e": "apps/rx-home-e2e",
+    "socket": "libs/socket"
+  }
+}
