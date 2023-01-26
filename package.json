@@ -4,8 +4,7 @@
   "description": "projectRx backend",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -19,5 +18,8 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.7.7"
+  },
+  "devDependencies": {
+    "jest": "^29.4.0"
   }
 }
