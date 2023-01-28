@@ -1,5 +1,5 @@
 # Smart E-Chemist 
-Smart E-Chemist (Online Pharmacy Management System) gh
+Smart E-Chemist (Online Pharmacy Management System)
 
 Smart E-Chemist is the name of a business organization, that provides service for consumers in Sri Lanka to fulfil their essential medicines & other health-related products. This business organization carried out their business activities through the online platform by using a web application. Hence this is basically an Online Pharmacy Management System.
 
