@@ -1,0 +1,39 @@
+<section class="login-page">
+    <div class="section-center">
+        <p-card header="">
+            <h1 align="center">
+                <font face="sans-serif" color="#FFFFFF" size="7">
+                Please Sign In
+                </font>
+            </h1> 
+            
+            <div class="field">
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+                    <input [(ngModel)]="username" type="text" class="p-inputtext-lg" 
+                        [ngClass]="{'ng-invalid ng-dirty' : isSubmitted && usernameIncorrect}"
+                        pInputText placeholder="Username">    
+
+                </div>
+
+                <small *ngIf="isSubmitted && usernameIncorrect" class="p-error">Please check again the above component</small>
+            </div>
+            
+            <div class="field">
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon"><i class="pi pi-lock"></i></span>
+                    <input [(ngModel)]="password" type="password" class="p-inputtext-lg" 
+                    [ngClass]="{'ng-invalid ng-dirty' : isSubmitted && passwordIncorrect}"
+                    pPassword [showPassword]="false" 
+                    [feedback]="false" 
+                    placeholder="Password">         
+                </div>
+                <small *ngIf="isSubmitted && passwordIncorrect" class="p-error">Password is incorrect.</small>
+            </div>
+
+            <button (click)="onSubmit()" class="btn login-btn">Sign In</button>
+
+        </p-card>
+    </div>
+</section>
+
